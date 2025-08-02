@@ -220,7 +220,7 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -228,7 +228,7 @@ body {
     overflow: hidden;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/cover.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-attachment: fixed;
 }
 
