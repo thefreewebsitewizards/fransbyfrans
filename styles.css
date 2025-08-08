@@ -1065,6 +1065,14 @@ cite {
         right: -100%;
     }
     
+    /* Fix hero background for mobile */
+    .hero {
+        margin-top: 70px;
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+    }
+    
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
