@@ -226,7 +226,7 @@ body {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/cover.jpeg');
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./assets/cover.jpeg');
     background-size: cover;
     background-position: center top;
     background-attachment: fixed;
@@ -1063,6 +1063,18 @@ cite {
     .nav-menu {
         width: 100%;
         right: -100%;
+        text-align: center;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-menu a {
+        text-align: center;
+        justify-self: center;
     }
     
     /* Fix hero background for mobile */

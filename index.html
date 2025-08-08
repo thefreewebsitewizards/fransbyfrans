@@ -6,6 +6,72 @@
     <title>Frans - Jeaggepop Artist</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Tour Hero Styles */
+        .tour-hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #000 0%, #333 50%, #000 100%);
+        }
+        
+        .tour-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+                url('./assets/cover.jpeg');
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
+        
+        .tour-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .coming-soon-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 10vw, 8rem);
+            line-height: 0.9;
+            letter-spacing: 8px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 0.1px rgba(200, 200, 200, 0.4);
+            text-stroke: 0.1px rgba(200,200,200, 0.4);
+            text-shadow: 0 0 8px rgba(200,200,200,0.15), 0 0 12px rgba(200,200,200,0.1);
+            animation: titleGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes titleGlow {
+            0% {
+                text-shadow: 0 0 8px rgba(200,200,200,0.15), 0 0 12px rgba(200,200,200,0.1);
+                -webkit-text-stroke: 0.1px rgba(200,200,200,0.3);
+            }
+            100% {
+                text-shadow: 0 0 10px rgba(200,200,200,0.2), 0 0 15px rgba(200,200,200,0.12);
+                -webkit-text-stroke: 0.1px rgba(200,200,200,0.4);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .tour-hero {
+                margin-top: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -33,12 +99,11 @@
     <div class="menu-overlay"></div>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="title-line">FRANS</span>
-            </h1>
-            
+    <section id="home" class="tour-hero">
+        <div class="tour-background"></div>
+        
+        <div class="tour-content">
+            <h1 class="coming-soon-title">FRANS</h1>
         </div>
     </section>
 

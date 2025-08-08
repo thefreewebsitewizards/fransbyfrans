@@ -47,12 +47,22 @@ document.addEventListener('keydown', (e) => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+        const href = this.getAttribute('href');
+        
+        // Special handling for home link to scroll to absolute top
+        if (href === '#home') {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
+        } else {
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         }
     });
 });
@@ -128,15 +138,21 @@ document.querySelectorAll('.play-btn').forEach(btn => {
 });
 
 // Hero Button Interactions
-document.querySelector('.btn-primary').addEventListener('click', () => {
-    // Simulate music player opening
-    showNotification('🎵 Opening Spotify playlist...');
-});
+const btnPrimary = document.querySelector('.btn-primary');
+if (btnPrimary) {
+    btnPrimary.addEventListener('click', () => {
+        // Simulate music player opening
+        showNotification('🎵 Opening Spotify playlist...');
+    });
+}
 
-document.querySelector('.btn-secondary').addEventListener('click', () => {
-    // Simulate video opening
-    showNotification('📺 Opening Ghost Town music video...');
-});
+const btnSecondary = document.querySelector('.btn-secondary');
+if (btnSecondary) {
+    btnSecondary.addEventListener('click', () => {
+        // Simulate video opening
+        showNotification('📺 Opening Ghost Town music video...');
+    });
+}
 
 // Notification System
 function showNotification(message) {
@@ -463,43 +479,7 @@ window.addEventListener('load', () => {
     }, 1500);
 });
 
-// Add CSS for mobile navigation
-const mobileNavStyle = document.createElement('style');
-mobileNavStyle.textContent = `
-    @media (max-width: 768px) {
-        .nav-menu {
-            position: fixed;
-            left: -100%;
-            top: 70px;
-            flex-direction: column;
-            background-color: rgba(255, 255, 255, 0.98);
-            width: 100%;
-            text-align: center;
-            transition: 0.3s;
-            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-            backdrop-filter: blur(10px);
-            padding: 40px 0;
-            gap: 20px;
-        }
-        
-        .nav-menu.active {
-            left: 0;
-        }
-        
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .hamburger.active span:nth-child(1) {
-            transform: translateY(9px) rotate(45deg);
-        }
-        
-        .hamburger.active span:nth-child(3) {
-            transform: translateY(-9px) rotate(-45deg);
-        }
-    }
-`;
-document.head.appendChild(mobileNavStyle);
+// Mobile navigation styles are now handled by styles.css
 
 console.log('🎵 FRANS 🎵');
 
