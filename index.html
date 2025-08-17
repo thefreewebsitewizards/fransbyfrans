@@ -24,9 +24,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
-                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-                url('./assets/cover.jpeg');
+            background-image: url('./assets/cover.jpeg');
             background-size: cover;
             background-position: center top;
             background-repeat: no-repeat;
@@ -49,20 +47,20 @@
             margin-bottom: 30px;
             text-transform: uppercase;
             color: transparent;
-            -webkit-text-stroke: 0.1px rgba(200, 200, 200, 0.4);
-            text-stroke: 0.1px rgba(200,200,200, 0.4);
-            text-shadow: 0 0 8px rgba(200,200,200,0.15), 0 0 12px rgba(200,200,200,0.1);
+            -webkit-text-stroke: 0.1px rgba(0, 0, 0, 0.4);
+            text-stroke: 0.1px rgba(0, 0, 0, 0.4);
+            text-shadow: 0 0 15px rgba(200,200,200,0.4), 0 0 25px rgba(200,200,200,0.3), 0 0 35px rgba(200,200,200,0.2);
             animation: titleGlow 2s ease-in-out infinite alternate;
         }
         
         @keyframes titleGlow {
             0% {
-                text-shadow: 0 0 8px rgba(200,200,200,0.15), 0 0 12px rgba(200,200,200,0.1);
-                -webkit-text-stroke: 0.1px rgba(200,200,200,0.3);
+                text-shadow: 0 0 15px rgba(200,200,200,0.4), 0 0 25px rgba(200,200,200,0.3), 0 0 35px rgba(200,200,200,0.2);
+                -webkit-text-stroke: 0.1px rgba(0, 0, 0, 0.5);
             }
             100% {
-                text-shadow: 0 0 10px rgba(200,200,200,0.2), 0 0 15px rgba(200,200,200,0.12);
-                -webkit-text-stroke: 0.1px rgba(200,200,200,0.4);
+                text-shadow: 0 0 20px rgba(200,200,200,0.6), 0 0 30px rgba(200,200,200,0.4), 0 0 40px rgba(200,200,200,0.3);
+                -webkit-text-stroke: 0.1px rgba(0, 0, 0, 0.7);
             }
         }
         

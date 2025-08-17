@@ -226,7 +226,7 @@ body {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./assets/cover.jpeg');
+    background: url('./assets/cover.jpeg');
     background-size: cover;
     background-position: center top;
     background-attachment: fixed;
@@ -258,8 +258,8 @@ body {
 
 .title-line {
     color: transparent;
-    -webkit-text-stroke: 0.5px rgba(200, 200, 200, 0.8);
-    text-stroke: 0.5px rgba(200,200,200, 0.8);
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.8);
+    text-stroke: 0.5px rgba(0, 0, 0, 0.8);
     text-shadow: 0 0 8px rgba(200,200,200,0.3);
     animation: titleGlow 2s ease-in-out infinite alternate;
 }
@@ -267,11 +267,11 @@ body {
 @keyframes titleGlow {
     0% {
         text-shadow: 0 0 8px rgba(200,200,200,0.3), 0 0 12px rgba(200,200,200,0.2);
-        -webkit-text-stroke: 0.5px rgba(200,200,200,0.7);
+        -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.7);
     }
     100% {
         text-shadow: 0 0 12px rgba(200,200,200,0.4), 0 0 16px rgba(200,200,200,0.3);
-        -webkit-text-stroke: 0.5px rgba(200,200,200,0.8);
+        -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.8);
     }
 }
 
